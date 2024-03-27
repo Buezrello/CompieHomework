@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PlayersDetailsInput {
     @CsvBindByPosition(position = 0)
-    private Long id;
+    private Integer id;
 
     @CsvBindByPosition(position = 1)
     private String nickname;

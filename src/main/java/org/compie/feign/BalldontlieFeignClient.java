@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "balldontlie-server", url = "${balldontlie.host}")
 public interface BalldontlieFeignClient {
     @GetMapping("/v1/players/{id}")
-    BalldontlieResponse getGeoapifyResponse(@RequestHeader("Authorization") String apiKey,
-                                            @RequestParam Long id);
+    BalldontlieResponse getBalldontlieResponse(@RequestHeader("Authorization") String apiKey,
+                                               @RequestParam Integer id);
 }
