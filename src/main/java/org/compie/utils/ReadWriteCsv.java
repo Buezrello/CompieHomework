@@ -39,6 +39,7 @@ public class ReadWriteCsv {
                      CSVWriter.DEFAULT_ESCAPE_CHARACTER,
                      CSVWriter.DEFAULT_LINE_END)) {
 
+            writer.write("ID,First Name,Last Name\n");
             StatefulBeanToCsv<Data> beanToCsv = new StatefulBeanToCsvBuilder<Data>(csvWriter)
                     .build();
 
