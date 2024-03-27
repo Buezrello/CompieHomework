@@ -25,7 +25,6 @@ public class RedisGenericImpl implements RedisGeneric {
 
     @Override
     public void savePlayerDetailsIfNewOrChanged(Data data) {
-        log.info("saving Player Details with id {} - if a Player is new or was updated", data.getId());
         Optional<Data> byId = redisRepositoryPlayerDetails.findById(data.getId());
 
         if (byId.isEmpty()) {
