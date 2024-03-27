@@ -1,6 +1,6 @@
 package org.compie.dto;
 
-import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PlayersDetailsInput {
-    @CsvBindByName(column = "id")
+    @CsvBindByPosition(position = 0)
     private Long id;
 
-    @CsvBindByName(column = "nickname")
+    @CsvBindByPosition(position = 1)
     private String nickname;
 }
