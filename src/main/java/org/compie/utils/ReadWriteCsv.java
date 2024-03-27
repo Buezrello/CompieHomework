@@ -2,7 +2,6 @@ package org.compie.utils;
 
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.opencsv.bean.HeaderColumnNameMappingStrategy;
 import com.opencsv.bean.StatefulBeanToCsv;
 import com.opencsv.bean.StatefulBeanToCsvBuilder;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
@@ -40,11 +39,7 @@ public class ReadWriteCsv {
                      CSVWriter.DEFAULT_ESCAPE_CHARACTER,
                      CSVWriter.DEFAULT_LINE_END)) {
 
-            HeaderColumnNameMappingStrategy<Data> mappingStrategy = new HeaderColumnNameMappingStrategy<>();
-            mappingStrategy.setType(Data.class);
-
             StatefulBeanToCsv<Data> beanToCsv = new StatefulBeanToCsvBuilder<Data>(csvWriter)
-                    .withMappingStrategy(mappingStrategy)
                     .build();
 
             beanToCsv.write(data);
