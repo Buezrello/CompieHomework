@@ -1,7 +1,7 @@
 # compie-homework-assignment
 Homework assignment Compie.com 
 
-Before runnig start redis docker with command
+Before running start redis docker with command
 
 docker run -it -d -p 6379:6379 --name MY_REDIS -e REDIS_PASSWORD=1234 redis
 
